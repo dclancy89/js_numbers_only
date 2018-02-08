@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript">
+				
+
+				var array1 = [1, "apple", -3, "orange", 0.5];
+
+
+				// puts only the numbers into a new array and return the new array
+				function numbersOnly(arr){
+					var newArr = [];
+
+					for(var i = 0; i < arr.length; i++) {
+						if(typeof arr[i] === "number") {
+							newArr.push(arr[i]);
+						}
+					}
+
+					return newArr;
+				}
+
+
+				// takes the not numbers from the passed array, mutating it.
+				function removeNotNumber(arr){
+					for(var i = 0; i < arr.length; i++) {
+						if(typeof arr[i] !== "number") {
+							arr.splice(i,1);
+							i--;
+						}
+					}
+
+				}
+
+				// new array without numbers
+				var newArray = numbersOnly(array1);
+
+				console.log("Original Array: " + array1);
+				console.log("New Array: " + newArray);
+
+
+				// remove the not numbers from the original array
+				removeNotNumber(array1);
+
+				console.log("Updated Old Array: " + array1);
+
+
+		</script>
+	</head>
+
+	<body>
+		See console
+	</body>
+</html>
